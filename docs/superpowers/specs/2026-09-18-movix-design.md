@@ -153,7 +153,10 @@ read-only. Needed contract changes stop the stream and go through the coordinato
   `[[redirects]] from = "/*" to = "/index.html" status = 200`
 - `VITE_TMDB_API_KEY` (Bearer read token) set in Netlify UI; `.env.example` commits
   the key name only. Frontend keys ship in the bundle — acceptable for TMDB read-only
-  tokens; restrict the token in TMDB settings (documented here, not a secret leak)
+  tokens; restrict the token in TMDB settings (documented here, not a secret leak).
+  Token registered 2026-09-19 under TMDB **personal, non-commercial use** certification:
+  Movieiz must generate no revenue and must not be used commercially without prior TMDB
+  approval
 - Bun auto-detected via `bun.lock`; `BUN_VERSION` pinned
 
 ## 10. Prerequisites & open items

@@ -1,2 +1,6 @@
 # Netlify — never commit link state (per netlify-deploy skill)
 .netlify/
+# Local secrets — TMDB tokens live in Netlify UI env, never in git
+.env
+.env.local
+.env.*.local
