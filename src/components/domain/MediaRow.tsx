@@ -17,6 +17,7 @@ export function MediaRow({ title, items, loading }: MediaRowProps) {
 				{loading
 					? Array.from({ length: 8 }, (_, i) => (
 							<Skeleton
+								// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
 								key={i}
 								className="h-64 w-36 shrink-0 rounded-lg sm:w-44"
 							/>

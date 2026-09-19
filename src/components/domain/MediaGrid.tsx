@@ -17,6 +17,7 @@ export function MediaGrid({
 		return (
 			<div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
 				{Array.from({ length: skeletonCount }, (_, i) => (
+					// biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
 					<Skeleton key={i} className="aspect-[2/3] rounded-lg" />
 				))}
 			</div>
