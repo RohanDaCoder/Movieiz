@@ -1,4 +1,4 @@
-# Movix Design Spec
+# Movieiz Design Spec
 
 **Date:** 2026-09-18
 **Status:** Approved (all 4 sections + Biome + contracts-first + parallel execution)
@@ -6,7 +6,7 @@
 
 ## 1. Goal
 
-Build **Movix**, a movie + TV streaming discovery and playback web app deployed as a
+Build **Movieiz**, a movie + TV streaming discovery and playback web app deployed as a
 static site on Netlify. Content metadata comes from TMDB; playback embeds come from
 CineSrc (`https://cinesrc.st/docs`), keyed by TMDB IDs.
 
@@ -103,7 +103,7 @@ Services (all stateful logic lives here):
   opts `{ back; autoplay; autonext; resumeSeconds }`. Sole owner of the CineSrc URL contract:
   `https://cinesrc.st/embed/movie/{tmdb_id}`,
   `https://cinesrc.st/embed/tv/{id}?s={season}&e={episode}`
-- `LocalStore<T>` — generic typed localStorage base (`movix:` namespace, JSON-safe).
+- `LocalStore<T>` — generic typed localStorage base (`movieiz:` namespace, JSON-safe).
   `WatchlistStore` (toggle/isSaved) and `ProgressStore` (upsert keyed by
   `type:id:s:e`; prune entries >90% watched or older than 60 days) extend it
 - Hooks (`useTrending`, `useSearch`, `useDiscover`, `useDetails`, `useWatchlist`,
